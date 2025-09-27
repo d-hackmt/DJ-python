@@ -1,0 +1,80 @@
+Existing Work & Algorithms
+
+Essentia (by MTG, Barcelona) → Open-source library with tempo, key, loudness, etc.
+
+Mixxx DJ software (open source) → Already implements beat sync + auto crossfade.
+
+Research papers:
+
+“Automatic DJ Mixing with Reinforcement Learning” (2019).
+
+“DJNet: Automatic DJ Mixing with Neural Networks” (2021).
+
+“Beat-aligned Crossfade using Deep Learning” (various).
+
+Data:
+
+Public DJ mixes on SoundCloud/YouTube (but not aligned datasets).
+
+Million Song Dataset (metadata, not aligned mixes).
+
+GTZAN / FMA for genre/tempo but not DJ transitions.
+
+No big curated dataset of professional transitions yet — this is a gap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+🤖 Where AI / ML Can Help
+1. Beat & Tempo Matching (AI-assisted sync)
+
+Use beat tracking algorithms (librosa, Essentia, madmom).
+
+Stretch/warp audio so beats align (like Ableton/Serato do).
+
+AI is useful for more robust beat detection in noisy/complex songs.
+
+2. Harmonic Mixing (Key Detection + AI)
+
+Detect musical key of each song (Camelot wheel system).
+
+Transition only between compatible keys (avoids clashes).
+
+Existing: librosa chroma features, Essentia key detection.
+
+3. Learned Transition Models
+
+A model trained on professional DJ sets could learn where and how to transition.
+
+Input: waveforms + metadata (tempo, key, energy).
+
+Output: timestamp + type of transition (fade, filter, drop).
+
+Data needed: aligned pairs of original tracks + DJ mixes.
+
+4. Energy-based Decisions
+
+AI can analyze song energy curve (like Spotify “valence/energy”).
+
+Match transitions when energy dips → smoother, less jarring.
+
+Existing: Spotify API gives “danceability, energy, valence, tempo, key” (already ML computed).
+
+5. Neural DJ / Sequence Models
+
+Think of it like language modeling but for music:
+
+Next-song prediction + transition prediction.
+
+Sequence models (RNN/Transformers) trained on DJ mixes.
+
+Early research exists, e.g. DJ-RNN (beat-aware mixing).

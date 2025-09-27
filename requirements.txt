@@ -1,0 +1,8 @@
+# cross fade
+pydub
+ffmpeg-python
+
+# beat matching
+librosa
+numpy
+scipy
