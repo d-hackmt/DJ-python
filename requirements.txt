@@ -6,3 +6,14 @@ ffmpeg-python
 librosa
 numpy
 scipy
+
+# software
+fastapi
+uvicorn[standard]
+python-multipart
+Pillow
+requests
+aiofiles
+
+# frontend
+streamlit
